@@ -11,6 +11,9 @@ NB! Muudatuste üles laadimisel tekkivad küsimused lahkame jooksvalt
     slackis FinalProject juturuumis, sellisel moel saame kõik osa
     probleemist ja selle lahendusest.
 
+NB! Jälgige, et kui teete "Pull request", et merge toimuks DIV branch-i.
+    Vaikimisi on see main ja tuleb ise ära muuta mis pranchist millisesse mergeda.
+
 NB! soovitatav on ennem muudatuste tegemist "merge"-da div branch enda oma külge.
     Sel moel on lihtsam vältida konflikti, et oma muudatuste üles laadmise ajaks
     on div-i muudetud.
