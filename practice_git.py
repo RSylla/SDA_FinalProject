@@ -20,3 +20,6 @@ NB! soovitatav on ennem muudatuste tegemist "merge"-da div branch enda oma külg
 """
 
 riddle = """Mõista mõista, mis see on: Istub kui isand, tolmab kui tont?"""
+vastus = "Korsten"
+
+riddle2 = "Tänapäevasem mõistatus an4-lt: Mees käib ööd, käib päevad, ei väsi ilmaski"
