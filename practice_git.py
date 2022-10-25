@@ -24,4 +24,5 @@ vastus = "Korsten"
 
 riddle2 = "Tänapäevasem mõistatus an4-lt: Mees käib ööd, käib päevad, ei väsi ilmaski"
 vastus = "Väsimatu mees :)"
+
 riddle3 = "Kanda jõuad, lugeda ei jõua"
