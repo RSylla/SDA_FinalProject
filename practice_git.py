@@ -23,3 +23,5 @@ riddle = """Mõista mõista, mis see on: Istub kui isand, tolmab kui tont?"""
 vastus = "Korsten"
 
 riddle2 = "Tänapäevasem mõistatus an4-lt: Mees käib ööd, käib päevad, ei väsi ilmaski"
+solution = Väsimatu mees :)
+riddle_3 = Kanda jõuad, lugeda ei jõua ?
