@@ -29,3 +29,6 @@ riddle3 = "Kanda jõuad, lugeda ei jõua"
 vastus3 = "Juuksed"
 
 riddle4 = "Kuningale kõlbab, koer teda ei söö?"
+vastus4 = "Sool"
+
+riddle5 = "Hiir läheb auku, saba jääb välja?"
