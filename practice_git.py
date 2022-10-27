@@ -47,4 +47,7 @@ riddle9 = "Mees meeleta, hobune jaluta."
 vastus9 =" laps ja häll"
 
 riddle10 = "Ümber ilma ulatub, ümber pea ei ulatu?"
+vastus10 = "Silmad"
+
+riddle11 = "Karu magab, kõrg kõigub?"
 
