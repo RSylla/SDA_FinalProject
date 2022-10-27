@@ -38,3 +38,6 @@ riddle6 = "Mäena õues, veena toas"
 vastus6 = "Lumi"
 
 riddle7 = "Üks puu, viis haru?"
+vastus7 ="käsi ja sõrmed"
+
+riddle8 =" seest siiruviiruline, pealt kullakarvaline"
