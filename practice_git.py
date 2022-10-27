@@ -44,3 +44,7 @@ riddle8 =" seest siiruviiruline, pealt kullakarvaline"
 vastus8 ="sibul"
 
 riddle9 = "Mees meeleta, hobune jaluta."
+vastus9 =" laps ja häll"
+
+riddle10 = "Ümber ilma ulatub, ümber pea ei ulatu?"
+
