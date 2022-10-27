@@ -35,3 +35,6 @@ riddle5 = "Hiir läheb auku, saba jääb välja?"
 vastus5 = "võti"
 
 riddle6 = "Mäena õues, veena toas"
+vastus6 = "Lumi"
+
+riddle7 = "Üks puu, viis haru?"
