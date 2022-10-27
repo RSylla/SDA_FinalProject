@@ -41,3 +41,6 @@ riddle7 = "Üks puu, viis haru?"
 vastus7 ="käsi ja sõrmed"
 
 riddle8 =" seest siiruviiruline, pealt kullakarvaline"
+vastus8 ="sibul"
+
+riddle9 = "Mees meeleta, hobune jaluta."
