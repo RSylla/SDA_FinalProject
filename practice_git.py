@@ -32,6 +32,3 @@ riddle4 = "Kuningale kõlbab, koer teda ei söö?"
 vastus4 = "Sool"
 
 riddle5 = "Hiir läheb auku, saba jääb välja?"
-vastus5 = "võti"
-
-riddle6 = "Mäena õues, veena toas"
