@@ -51,3 +51,11 @@ vastus10 = "Silmad"
 
 riddle11 = "Karu magab, kõrg kõigub?"
 vastus11 ="Maja ja uks"
+
+#synonyym == SÜNONÜÜM
+#All on leid internetist
+mis_on_nende_synonyym = """'väikest kasvu inimene', liliput, pügmee, junn mehejunn, poisijunn
+                          , jupp poisijupp, jupats poisijupats, juss mehejuss, jäss mehejäss, 
+                          kirp, punn, köiesõlm ülek, tubakakott ülek, Jupi Jaak, punnam, 
+                          mehe mõistatus, tirivimm, käbi"""
+synonyym = "?"
