@@ -58,4 +58,10 @@ mis_on_nende_synonyym = """'väikest kasvu inimene', liliput, pügmee, junn mehe
                           , jupp poisijupp, jupats poisijupats, juss mehejuss, jäss mehejäss, 
                           kirp, punn, köiesõlm ülek, tubakakott ülek, Jupi Jaak, punnam, 
                           mehe mõistatus, tirivimm, käbi"""
-synonyym = "?"
+synonyym = "Kääbus"
+
+
+#Leia, mida või keda, kardavad seda foobiat põdevad inimesed??
+foobia = "Alektorofoobia"
+keda_mida kardetakse = "?"
+
