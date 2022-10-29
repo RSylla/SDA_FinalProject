@@ -65,3 +65,6 @@ synonyym = "Kääbus"
 foobia = "Alektorofoobia"
 keda_mida kardetakse = "?"
 
+vastus = "hirm tibude ees"
+
+uus_foobia = "Pogonophobia"
