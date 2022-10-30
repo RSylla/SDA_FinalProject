@@ -3,7 +3,6 @@
 * Contributors: Anneli, Raivo, Kristina
 
 
-
 # Development Tickets for project:
 
 | Todo | Estimated time | Name | Indevelopment | Review | Testing     | Done |
