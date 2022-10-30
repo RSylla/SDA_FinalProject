@@ -4,42 +4,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SmartApp</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base.css' %}">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </head>
-
+<!--  Raivo created this is base html file with base styling from static files-->
+<!--  Also created static folder to set up static files like CSS and image files.-->
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark" id="navbar">
       <div class="container fixed">
         <a class="navbar-brand" href="/">SmartApp</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" id="toggle_button_border" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+            {% load static %}
+            <span id="toggle_button">
+                <img src="{% static 'threelines.png' %}">
+            </span>
         </button>
-
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-<!--            {% for view in views_list %}-->
-<!--                <a class="nav-item nav-link active" href="{% url view %}">-->
-<!--                  {{ view.capitalize }}-->
-<!--                </a>-->
-<!--            {% endfor %}-->
-            <a class="nav-item nav-link active" href="{% url 'home' %}">
-              Home
-            </a>
-
+            <span>
+            <a class="nav-item nav-link active" id="back_link" href="{% url 'form' %}">
+              <b>Home</b></a>
+            </span>
           </div>
         </div>
       </div>
 
     </nav>
     <div class="container">
-      <div class="jumbotron">
-          <h3>Homepage for our SmartApp</h3>
+        <div id="content_div">
           {% block content %}
 
           {% endblock %}
-      </div>
+        </div>
     </div>
   </body>
 
