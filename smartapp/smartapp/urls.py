@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from smarthub.views import homepage
+from smarthub.views import formView, guideView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage, name='home'),
+    path('', formView, name='form'),#Raivo added this url for index(input form(
+    path('guide', guideView, name='guide'),#Raivo added this url for summary
 ]
