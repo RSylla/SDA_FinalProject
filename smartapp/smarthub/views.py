@@ -17,6 +17,8 @@ class SmartAppView(FormView):
 
     def form_valid(self, form):
         form_data = form.cleaned_data
-        print(form_data)
+        for k, v in form_data.items():
+            print(f"{k}: {v}")
+
 
         return super().form_valid(form)
