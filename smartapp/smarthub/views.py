@@ -20,5 +20,4 @@ class SmartAppView(FormView):
         for k, v in form_data.items():
             print(f"{k}: {v}")
 
-
         return super().form_valid(form)

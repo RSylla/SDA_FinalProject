@@ -16,19 +16,16 @@
 <!--  Also created static folder to set up static files like CSS and image files.-->
   <body>
     <nav class="navbar navbar-dark bg-dark" id="navbar">
-      <div class="container fixed">
-        <a class="navbar-brand" href="/">SmartApp</a>
-        <button class="navbar-toggler" type="button" id="toggle_button_border" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-            {% load static %}
-            <span id="toggle_button">
-                <img src="{% static 'threelines.png' %}">
-            </span>
-        </button>
+      <div class="container fixed" style="width: 100%; padding: 0; margin: 0; display: contents;">
+        <a class="navbar-brand">SmartApp</a>
+        {% block nav %}
+
+        {% endblock %}
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <span>
             <a class="nav-item nav-link active" id="back_link" href="{% url 'home' %}">
-              <b>Home</b></a>
+              <b>home</b></a>
             </span>
           </div>
         </div>

@@ -1,12 +1,11 @@
 from django import forms
 
-CHOICES=[('upper_case','upper_case'),
-         ('lower_case','lower_case')]
+
 class SmartAppForm(forms.Form):
-    text = forms.CharField(max_length=500, widget=forms.Textarea)
+    text = forms.CharField(max_length=500, widget=forms.Textarea(attrs={"spellcheck":"False"}))
     remove_punctuations = forms.BooleanField(required=False)
-    upper_case = forms.BooleanField(required=False, widget=forms.RadioSelect(choices=CHOICES))
-    # lower_case = forms.BooleanField(required=False, widget=forms.RadioSelect)
+    upper_case = forms.BooleanField(required=False)
+    lower_case = forms.BooleanField(required=False)
     new_line_remove = forms.BooleanField(required=False)
     extra_space_remove = forms.BooleanField(required=False)
     count_characters = forms.BooleanField(required=False)
