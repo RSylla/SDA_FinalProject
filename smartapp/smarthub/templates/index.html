@@ -4,20 +4,77 @@
 {% extends "base.html"%}
 
 {% block content %}
-<h3>Here will be our form</h3>
-<textarea></textarea>
-<ol>
-        <li>Remove Punctuations</li>
-        <li>UpperCase</li>
-        <li>New Line Remove</li>
-        <li>Extra Space Remove</li>
-        <li>Count Characters</li>
-        <li>Spell Check</li>
-        <li>Generate Summary Of a Word</li>
-        <li>Remove 'Stop' words of your paragraph</li>
-    </ol>
 
-<button><a href="/guide">Submit</a></button>
+<form method="post">
+    {% csrf_token %}
+    <p>{{ form.text }}</p>
+
+    <p>
+        <label class="switch">
+        {{ form.remove_punctuations }}
+        <span class="slider round"></span>
+        </label>
+        Remove Punctuations
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.upper_case }}
+        <span class="slider round"></span>
+        </label>
+        Upper Case
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.lower_case }}
+        <span class="slider round"></span>
+        </label>
+        Lower Case
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.new_line_remove }}
+        <span class="slider round"></span>
+        </label>
+        New Line Remove
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.extra_space_remove }}
+        <span class="slider round"></span>
+        </label>
+        Extra Space Remove
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.count_characters }}
+        <span class="slider round"></span>
+        </label>
+        Count Characters
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.spell_check }}
+        <span class="slider round"></span>
+        </label>
+        Spell Check
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.gen_word_summary }}
+        <span class="slider round"></span>
+        </label>
+        Generate Summary Of a Word
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.remove_stop }}
+        <span class="slider round"></span>
+        </label>
+        Remove Stop Words of your Paragraph
+    </p>
+    <input type="submit" value="Submit">
+
+</form>
 
 
 {% endblock %}
