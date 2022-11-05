@@ -76,7 +76,7 @@ p {
 
 textarea {
   width: 100%;
-  min-width: 500px;
+  min-width: 200px;
   margin-bottom: 25px;
   border-color: #ccc;
   padding: 15px;
