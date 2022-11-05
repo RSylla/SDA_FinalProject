@@ -3,6 +3,15 @@
 
 {% extends "base.html"%}
 
+{% block nav %}
+    <button class="navbar-toggler" type="button" id="toggle_button_border" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        {% load static %}
+        <span id="toggle_button">
+            <img src="{% static 'threelines.png' %}">
+        </span>
+    </button>
+{% endblock %}
+
 {% block content %}
 <h3>Here will be the summary of manipulated text:</h3>
     <ol>
