@@ -1,29 +1,32 @@
 from django.test import TestCase
+from smarthub.k_tickets import *
+from smarthub.a_tickets import *
 
-# Create your tests here.
+class FunctionalityTest(TestCase):
 
-toggle_upper = True
-toggle_lower = False
+    def test_remove_punctuations(self):
+        pass
 
-text = "Suvaline text, mida on vaja muuta."
+    def test_upper_case(self):
+        pass
 
-def text_upper(text):
-    return text.upper()
+    def test_lower_case(self):
+        pass
 
-def text_lower(text):
-    return text.lower()
+    def test_new_line_remove(self):
+        pass
 
+    def test_extra_space_remove(self):
+        pass
 
+    def test_count_characters(self):
+        pass
 
+    def test_spell_check(self):
+        pass
 
-text = "\n Suvaline text, mis on vaja muuta!\n Ma ei tea kas see on norm."
-def rem_new_line(text):
-    text = text.split()
-    text = " ".join(text)
-    return text
+    def test_gen_word_summary(self):
+        pass
 
-def remove_new_line(text):
-    return " ".join(text.split())
-
-print(rem_new_line(text))
-print(remove_new_line(text))
+    def test_remove_stop(self):
+        pass
