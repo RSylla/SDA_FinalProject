@@ -1,3 +1,5 @@
+
+
 # 1.09 Add logic to remove extra space
 
 string = "       Täiesti    suvaline          proov!"
