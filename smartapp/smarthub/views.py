@@ -23,16 +23,22 @@ class SmartAppView(FormView):
 def guideView(request):
     changed_data = {}
     text = form_data['text']
+    edited_text = text
     if bool(form_data['remove_punctuations']):
         changed_data['Remove Punctuations:'] = punctuation_removal(text)
+        edited_text = punctuation_removal(edited_text)
     if bool(form_data['upper_case']):
         changed_data['Upper Case:'] = text_upper(text)
+        edited_text = text_upper(edited_text)
     if bool(form_data['lower_case']):
         changed_data['Lower Case:'] = text_lower(text)
+        edited_text = text_lower(edited_text)
     if bool(form_data['new_line_remove']):
         changed_data['New Line Remove:'] = remove_new_line(text)
+        edited_text = remove_new_line(edited_text)
     if bool(form_data['extra_space_remove']):
         changed_data['Extra Space Remove:'] = remove_extra(text)
+        edited_text = remove_extra(edited_text)
     if bool(form_data['count_characters']):
         changed_data['Count Characters:'] = count_characters(text)
     if bool(form_data['spell_check']):
@@ -43,6 +49,7 @@ def guideView(request):
         changed_data['Remove Stop Words of your Paragraph:'] = "dummy text"
 
     context = {
+        'edited_text': edited_text,
         'content': changed_data
     }
     return render(request, template_name='guide.html', context=context)

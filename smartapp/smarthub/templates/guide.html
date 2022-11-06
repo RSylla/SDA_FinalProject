@@ -13,6 +13,9 @@
 {% endblock %}
 
 {% block content %}
+<h2>Combined result:</h2>
+{{ edited_text }}
+<hr>
 {% for k, v in content.items %}
     <h3>{{ k }}</h3>
     <p>{{ v }}</p>
