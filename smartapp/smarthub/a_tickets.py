@@ -1,8 +1,6 @@
+from textblob import TextBlob   #for ticket 1.11
+
 # 1.09 Add logic to remove extra space
-
-string = "       Täiesti    suvaline          proov!"
-
-
 def remove_extra(string):
 
     while '  ' in string:
@@ -11,14 +9,7 @@ def remove_extra(string):
     return string.strip()
 
 
-print(remove_extra(string))
-
-
 # 1.10 Add logic to count characters
-
-string = "How many characters are thereu on märke on lauses tühikutega ja ilma?"
-
-
 def count_characters(string):
 
     if string:
@@ -27,9 +18,30 @@ def count_characters(string):
         spaces = string.count(' ')
         num_words = len(string.split())
 
-    return (f"Characters with spaces: {with_spaces} \nCharacters without spaces: {without_spaces} \nSpaces: {spaces} \nWords: {num_words}")
+    return (f"All characters: {with_spaces} \nOnly characters (without spaces): {without_spaces} \nSpaces: {spaces} \nWords: {num_words}")
 
 
-print(count_characters(string))
+# 1.11 Add logic to check for text spellings
+# pip install textblob
+
+from textblob import TextBlob, Word
+from smarthub.k_tickets import punctuation_removal
+
+
+def spell_check(text):
+    text = punctuation_removal(text)
+    corrected = TextBlob(text)
+    incorrect_words = []
+    for word in text.split():
+        wordy = Word(word).spellcheck()[0]
+        if wordy[0] != word and wordy[1] >= 0.7:
+            incorrect_words.append(word)
+    print(incorrect_words)
+    return (f'Corrected text: {corrected.correct()}, \nThese words were incorrect: {incorrect_words})
+
+
+
+
+
 
 
