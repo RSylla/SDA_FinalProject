@@ -25,7 +25,7 @@ def count_characters(string):
 # pip install textblob
 
 from textblob import TextBlob, Word
-from smarthub.k_tickets import punctuation_removal
+from smartapp.smarthub.k_tickets import punctuation_removal
 
 
 def spell_check(text):
@@ -37,11 +37,38 @@ def spell_check(text):
         if wordy[0] != word and wordy[1] >= 0.7:
             incorrect_words.append(word)
     print(incorrect_words)
-    return (f'Corrected text: {corrected.correct()}, \nThese words were incorrect: {incorrect_words})
+    return (f"Corrected text: {corrected.correct()}, \nThese words were incorrect: {incorrect_words}")
 
 
+# 1.13 Add logic to remove stop words from text
+
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+"""terminali:
+python -m nltk.downloader stopwords
+või 
+nltk.download('stopwords') ...viimane ei tööta"""
 
 
+text = """This IS a sample sentence, showing off the stop words filtration."""
 
+
+def remove_stopwords(text):
+    text = text
+    stop_words = set(stopwords.words('english'))
+    word_tokens = word_tokenize(text.lower())
+
+    filtered_sentence = []
+
+    for w in word_tokens:
+        if w not in stop_words:
+
+            filtered_sentence.append(w)
+    return (f"Original sentence: {text}, \nFiltered sentence: {filtered_sentence}")
+
+
+print(remove_stopwords(text))
 
 
