@@ -13,17 +13,16 @@
 {% endblock %}
 
 {% block content %}
-<h3>Here will be the summary of manipulated text:</h3>
-    <ol>
-        <li>Remove Punctuations</li>
-        <li>UpperCase</li>
-        <li>New Line Remove</li>
-        <li>Extra Space Remove</li>
-        <li>Count Characters</li>
-        <li>Spell Check</li>
-        <li>Generate Summary Of a Word</li>
-        <li>Remove 'Stop' words of your paragraph</li>
-    </ol>
-
+<div id="result">
+    <h2>Combined result:</h2>
+    {{ edited_text }}
+</div>
+{% for k, v in content.items %}
+    <details>
+        <summary><h5>{{ k }}</h5></summary>
+        <p>{{ v }}</p>
+    </details>
+    <hr>
+{% endfor %}
 
 {% endblock %}
