@@ -1,6 +1,6 @@
-from django.test import TestCase
-from smarthub.k_tickets import *
-from smarthub.a_tickets import *
+from unittest import TestCase
+from .k_tickets import *
+from .a_tickets import *
 
 class FunctionalityTest(TestCase):
 
@@ -30,3 +30,6 @@ class FunctionalityTest(TestCase):
 
     def test_remove_stop(self):
         pass
+
+if __name__ == '__main__':
+    unittest.main()
