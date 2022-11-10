@@ -28,3 +28,4 @@ def remove_new_line(text):
 def word_summary(example):
     summary = wikipedia.summary(example)
     return summary
+
