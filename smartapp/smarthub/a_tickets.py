@@ -1,4 +1,8 @@
-from textblob import TextBlob   #for ticket 1.11
+from textblob import TextBlob, Word
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from smartapp.smarthub.k_tickets import punctuation_removal
 
 # 1.09 Add logic to remove extra space
 def remove_extra(string):
@@ -21,12 +25,7 @@ def count_characters(string):
     return (f"All characters: {with_spaces} \nOnly characters (without spaces): {without_spaces} \nSpaces: {spaces} \nWords: {num_words}")
 
 
-# 1.11 Add logic to check for text spellings
-# pip install textblob
-
-from textblob import TextBlob, Word
-from smartapp.smarthub.k_tickets import punctuation_removal
-
+#1.11 Add logic to check for text spellings
 
 def spell_check(text):
     text = punctuation_removal(text)
@@ -42,21 +41,8 @@ def spell_check(text):
 
 # 1.13 Add logic to remove stop words from text
 
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-
-"""terminali:
-python -m nltk.downloader stopwords
-või 
-nltk.download('stopwords') ...viimane ei tööta"""
-
-
-text = """This IS a sample sentence, showing off the stop words filtration."""
-
-
 def remove_stopwords(text):
-    text = text
+    text = punctuation_removal(text)
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(text.lower())
 
@@ -66,9 +52,9 @@ def remove_stopwords(text):
         if w not in stop_words:
 
             filtered_sentence.append(w)
-    return (f"Original sentence: {text}, \nFiltered sentence: {filtered_sentence}")
+    return (f"Original sentence: {text}, \nFiltered sentence without stopwords: {filtered_sentence}")
 
 
-print(remove_stopwords(text))
+
 
 
