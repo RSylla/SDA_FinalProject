@@ -1,8 +1,8 @@
-from unittest import TestCase
-from .k_tickets import *
-from .a_tickets import *
+import unittest
+from smartapp.smarthub.k_tickets import *
+from smartapp.smarthub.a_tickets import *
 
-class FunctionalityTest(TestCase):
+class FunctionalityTest(unittest.TestCase):
 
     def test_remove_punctuations(self):
         pass
@@ -16,14 +16,18 @@ class FunctionalityTest(TestCase):
     def test_new_line_remove(self):
         pass
 
-    def test_extra_space_remove(self):
-        pass
+    def test_when_extra_space_removed_then_true (self):
+        self.assertTrue(remove_extra("") == "")
+        self.assertFalse(remove_extra("") == "")
 
-    def test_count_characters(self):
-        pass
+    def test_when_characters_counted_then_true(self):
+        self.assertTrue(count_characters("with spaces!") == "with spaces!")
+        self.assertFalse(count_characters("with spaces!") == "with spaces!")
+
 
     def test_spell_check(self):
-        pass
+        self.assertTrue(spell_check("is this sentence correct") == "is this sentence correct")
+        self.assertFalse(spell_check("is this sentence correct") == "is this sentence correct")
 
     def test_gen_word_summary(self):
         pass
