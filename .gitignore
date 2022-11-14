@@ -162,4 +162,3 @@ cython_debug/
 *.iml
 *.pyc
 *.pyc
-*.sqlite3
