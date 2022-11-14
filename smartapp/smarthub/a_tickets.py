@@ -7,7 +7,6 @@ from SDA_FinalProject.smartapp.smarthub.k_tickets import punctuation_removal
 
 # 1.09 Add logic to remove extra space
 
-
 def remove_extra(string):
 
     while '  ' in string:
@@ -32,7 +31,7 @@ def count_characters(text):
 
         return char_count, char_wo_spaces, space_count, word_count
 
-text= "It is verry loovely dday."
+
 #1.11 Add logic to check for text spellings
 def spell_check(text):
     corrected = TextBlob(text)
@@ -47,7 +46,7 @@ def spell_check(text):
 
     return corrected_text, incorrect_words
 
-print(spell_check(text))
+
 
 # 1.13 Add logic to remove stop words from text
 def remove_stopwords(text):
