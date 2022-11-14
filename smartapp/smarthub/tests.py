@@ -13,8 +13,9 @@ class FunctionalityTest(unittest.TestCase):
 
 
     def test_when_spell_check_corrected_the_true(self):
-        self.assertTrue(spell_check("It is verry loovely dday.") == "It is very lovely day.")
+        self.assertTrue(spell_check("It is verry loovely dday.")[0] == "It is very lovely day.")
         self.assertFalse(spell_check("It is verry loovely dday.") == "It is verry loovely dday.")
+        self.assertTrue(spell_check("It is verry loovely dday.")[1] == "Incorrect words: verry, loovely!")
 
 
     def test_when_stop_words_removed_then_true(self):
