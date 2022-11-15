@@ -26,6 +26,9 @@ def remove_new_line(text):
 
 #1.12 Add logic to generate summary of word
 def word_summary(example):
-    summary = wikipedia.summary(example)
-    return summary
+    try:
+        summary = wikipedia.summary(example)
+        return summary
+    except wikipedia.exceptions.DisambiguationError as e:
+        return f"The word '{example}' may refer to: {e.options}"
 

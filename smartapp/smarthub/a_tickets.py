@@ -2,7 +2,7 @@ from textblob import TextBlob, Word
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-from SDA_FinalProject.smartapp.smarthub.k_tickets import punctuation_removal
+from .k_tickets import punctuation_removal
 
 
 # 1.09 Add logic to remove extra space
@@ -37,6 +37,7 @@ def spell_check(text):
     corrected = TextBlob(text)
     incorrect_words = []
     for word in text.split():  # makes a list and checks for each word
+        word = punctuation_removal(word)
         wordy = Word(word).spellcheck()[0]  # returns a tuple of suggested word and probability
         if wordy[0] != word and wordy[1] >= 0.7: #it compares the word entered by user if the probability that the word we want is correct over 70%
             incorrect_words.append(word)
