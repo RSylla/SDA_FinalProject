@@ -27,6 +27,7 @@ def guideView(request):
     if bool(form_data['gen_word_summary']):
         changed_data['Generate Summary Of a Word:'] = word_summary(text)
         edited_text = word_summary(text)
+        text = edited_text
     if bool(form_data['remove_punctuations']):
         changed_data['Remove Punctuations:'] = punctuation_removal(text)
         edited_text = punctuation_removal(edited_text)
@@ -43,13 +44,13 @@ def guideView(request):
         changed_data['Extra Space Remove:'] = remove_extra(text)
         edited_text = remove_extra(edited_text)
     if bool(form_data['count_characters']):
-        changed_data['Count Characters:'] = count_characters(text)
+        changed_data['Count Characters:'] = " ".join(count_characters(text))
     if bool(form_data['spell_check']):
         changed_data['Spell Check:'] = spell_check(text)[1]
         edited_text = spell_check(edited_text)[0]
     if bool(form_data['remove_stop']):
-        changed_data['Remove Stop Words of your Paragraph:'] = remove_stopwords(text)
-        edited_text = remove_stopwords(edited_text)
+        changed_data['Remove Stop Words of your Paragraph:'] = remove_stopwords(str(text))
+        edited_text = remove_stopwords(str(edited_text))
 
     context = {
         'edited_text': edited_text,
