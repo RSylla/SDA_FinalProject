@@ -1,0 +1,28 @@
+<!--Raivo created HTML page "guide" for the summary-->
+<!--From the inputform. Right now it contains sample text for visuality -->
+
+{% extends "base.html"%}
+
+{% block nav %}
+    <button class="navbar-toggler" type="button" id="toggle_button_border" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        {% load static %}
+        <span id="toggle_button">
+            <img src="{% static 'threelines.png' %}">
+        </span>
+    </button>
+{% endblock %}
+
+{% block content %}
+<div id="result">
+    <h2>Combined result:</h2>
+    {{ edited_text|linebreaksbr }}
+</div>
+{% for k, v in content.items %}
+    <details>
+        <summary><h5>{{ k }}</h5></summary>
+        <p>{{ v|linebreaksbr }}</p>
+    </details>
+    <hr>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,80 @@
+<!--Raivo created Index.html for inputform with textarea.-->
+<!--Right now it contains sample text for visuality.-->
+
+{% extends "base.html"%}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>{{ form.text }}</p>
+
+    <p>
+        <label class="switch">
+        {{ form.remove_punctuations }}
+        <span class="slider round"></span>
+        </label>
+        Remove Punctuations
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.upper_case }}
+        <span class="slider round"></span>
+        </label>
+        Upper Case
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.lower_case }}
+        <span class="slider round"></span>
+        </label>
+        Lower Case
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.new_line_remove }}
+        <span class="slider round"></span>
+        </label>
+        New Line Remove
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.extra_space_remove }}
+        <span class="slider round"></span>
+        </label>
+        Extra Space Remove
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.count_characters }}
+        <span class="slider round"></span>
+        </label>
+        Count Characters
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.spell_check }}
+        <span class="slider round"></span>
+        </label>
+        Spell Check
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.gen_word_summary }}
+        <span class="slider round"></span>
+        </label>
+        Generate Summary Of a Word
+    </p>
+    <p>
+        <label class="switch">
+        {{ form.remove_stop }}
+        <span class="slider round"></span>
+        </label>
+        Remove Stop Words of your Paragraph
+    </p>
+    <input type="submit" value="Submit">
+
+</form>
+
+
+{% endblock %}
