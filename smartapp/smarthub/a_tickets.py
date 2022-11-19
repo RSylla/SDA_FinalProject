@@ -3,6 +3,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from .k_tickets import punctuation_removal
+from string import punctuation
 
 
 # 1.09 Add logic to remove extra space
@@ -37,7 +38,7 @@ def spell_check(text):
     corrected = TextBlob(text)
     incorrect_words = []
     for word in text.split():  # makes a list and checks for each word
-        word = punctuation_removal(word)
+        word = punctuation_removal(word, punctuation)
         wordy = Word(word).spellcheck()[0]  # returns a tuple of suggested word and probability
         if wordy[0] != word and wordy[1] >= 0.7: #it compares the word entered by user if the probability that the word we want is correct over 70%
             incorrect_words.append(word)
@@ -51,7 +52,7 @@ def spell_check(text):
 
 # 1.13 Add logic to remove stop words from text
 def remove_stopwords(text):
-    text = punctuation_removal(text)
+    text = punctuation_removal(text, punctuation)
     stop_words = set(stopwords.words('english'))
     word_tokens = word_tokenize(text.lower())
 
