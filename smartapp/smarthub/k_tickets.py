@@ -33,6 +33,8 @@ def word_summary(example):
         return f'{summary}\n\n You might want to consider these words also: {", ".join(search_suggestion)}.'
     except wikipedia.exceptions.DisambiguationError as e:
         return f"The word '{example}' may refer to: {e.options}"
+    except wikipedia.exceptions.PageError:
+        return f"Your text '{example}' does not match any pages. Try another text!"
 
 
 
