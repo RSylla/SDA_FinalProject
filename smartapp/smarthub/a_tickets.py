@@ -54,13 +54,13 @@ def spell_check(text):
 def remove_stopwords(text):
     text = punctuation_removal(text, punctuation)
     stop_words = set(stopwords.words('english'))
+    our_stop_words = ["shit", "damn", "crap"]
     word_tokens = word_tokenize(text.lower())
 
     filtered_sentence = []
 
     for w in word_tokens:
-        if w not in stop_words:
-
+        if w not in stop_words and w not in our_stop_words:
             filtered_sentence.append(w)
 
     wo_stopwords = f"{', '.join(filtered_sentence)}"
