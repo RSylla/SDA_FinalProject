@@ -15,12 +15,12 @@
 {% block content %}
 <div id="result">
     <h2>Combined result:</h2>
-    {{ edited_text }}
+    {{ edited_text|linebreaksbr }}
 </div>
 {% for k, v in content.items %}
     <details>
         <summary><h5>{{ k }}</h5></summary>
-        <p>{{ v }}</p>
+        <p>{{ v|linebreaksbr }}</p>
     </details>
     <hr>
 {% endfor %}
