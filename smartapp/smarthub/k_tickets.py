@@ -34,7 +34,7 @@ def word_summary(example):
     except wikipedia.exceptions.DisambiguationError as e:
         return f"The word '{example}' may refer to: {e.options}"
     except wikipedia.exceptions.PageError:
-        return f'Your text "{example}" does not match any pages to Generate Summary Of a Word. Try another text!'
+        return f"Your text '{example}' does not match any pages. Try another text!"
 
 
 
